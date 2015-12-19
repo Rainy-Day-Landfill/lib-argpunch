@@ -19,7 +19,8 @@ int main( int argumentsCount, char *arguments[] )
 			{ 
 				char option[]; 
 				int *OptionFunctionPtr; 
-				char mode[];  (optional|required|valued|non-valued)
+				char class[];  [optional|required]
+				int valued; [0|1]
 				char description[];
 			};
 			typedef Conf struct OptionsEntryTable;
