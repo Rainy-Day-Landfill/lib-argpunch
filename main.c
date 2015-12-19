@@ -12,9 +12,33 @@ int main( int argumentsCount, char *arguments[] )
 		Need some sort of object to store config and iterate through maybe?
 			How will the user build their app?
 			How will we associate code-flow with arguments and their values?
-				Key/Value pairs?
-			Maybe a struct with four arrays:  optional, required, valued, non-valued?
-
+			
+		Current idea for next iteration:
+		
+			struct OptionsEntryTable
+			{ 
+				char option[]; 
+				int *OptionFunctionPtr; 
+				char mode[];  (optional|required|valued|non-valued)
+				char description[];
+			};
+			typedef Conf struct OptionsEntryTable;
+			
+			int main(argv, argc) 
+			{
+				// initialize the table
+				Conf Config[?];
+				
+				// populate the table from
+				//	a function that is full of entries of possible options and functions
+				//	supplied arguments from argv, argc
+				argInit(Config, argv, argc);
+				
+				// executes functions pointed to for respective options
+				argPunch(Config);
+			}
+			
+			
 		Requirements:
 		1.  Let's make it easy and fast to setup.
 		2.  Do NOT use getopt or argp.
