@@ -15,7 +15,7 @@ int main( int argumentsCount, char *arguments[] )
 				Key/Value pairs?
 			Maybe a struct with four arrays:  optional, required, valued, non-valued?
 
-		Reqirements:
+		Requirements:
 		1.  Let's make it easy and fast to setup.
 		2.  Do NOT use getopt or argp.
 		3.  Do NOT go platform-dependent.
