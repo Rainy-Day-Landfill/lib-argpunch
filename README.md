@@ -1,5 +1,5 @@
 # lib-argpunch
-Cross-Platform Argument Parsing Library in C
+A Fully C99 compatible, cross-platform Argument Parsing Library  
   by cmpunches, 2015
 
-Fully C99 compatible.
+
